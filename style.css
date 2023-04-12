@@ -1,0 +1,230 @@
+#overlayvideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#overlayvideo h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 5vw;
+    letter-spacing: 1vw;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+#overlay {
+    background-color: black;
+    padding: 40px 0;
+    text-align: center;
+}
+  
+
+#overlay h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 3vw;
+    letter-spacing: 3vw;
+    line-height: 1.2;
+    margin: 0;
+    text-transform: uppercase;
+}
+  
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+#menu__toggle {
+    opacity: 0;
+}
+
+    #menu__toggle:checked + .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+        #menu__toggle:checked + .menu__btn > span::before {
+            top: 0;
+            transform: rotate(0deg);
+        }
+
+        #menu__toggle:checked + .menu__btn > span::after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+
+    #menu__toggle:checked ~ .menu__box {
+        left: 0 !important;
+    }
+
+.menu__btn {
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+    }
+
+        .menu__btn > span::before {
+            content: '';
+            top: -8px;
+        }
+
+        .menu__btn > span::after {
+            content: '';
+            top: 8px;
+        }
+
+.menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: black;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+#approved {
+    background: linear-gradient(to bottom, #000000, #000000, #2c3e50);
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.porsche img {
+    width: 40%;
+    margin-left: 20px;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    padding-left: 950px;
+}
+
+.porsche p {
+    color: antiquewhite;
+    font-size: 25px;
+    margin-top: -300px;
+    padding-bottom: 50px;
+    padding-right: 1000px;
+    animation: slideIn 1s forwards;
+}
+
+#approved h2 {
+    color: white;
+    font-size: 75px;
+    position: absolute;
+    top: 180px;
+    left: 150px;
+    animation: slideIn 1s forwards;
+}
+
+    #approved h2 span:first-of-type {
+        font-family: sans-serif;
+        display: block;
+        padding-bottom: 0em;
+    }
+
+    #approved h2 span:nth-of-type(2) {
+        font-family:sans-serif;
+        text-transform: uppercase;
+        font-style: italic;
+        display: block;
+        padding-left: 0.6em;
+        padding-top: 0em;
+        padding-bottom: 0.001em;
+    }
+
+    #approved h2 span:last-of-type {
+        font-family: sans-serif;
+        display: block;
+        padding-top: 0.1em;
+    }
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#button-container {
+    position: absolute;
+    left: 250px;
+    top: 800px;
+}
+
+.book-now-btn {
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+  }
+  
+  .book-now-btn:hover {
+    background-image: linear-gradient(90deg, #97b7e0, #bfcfdf);
+    text-decoration: none;
+  }
+  
